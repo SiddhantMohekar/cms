@@ -33,7 +33,7 @@ public class UserController {
         return ResponseEntity.of(Optional.of(list));
     }
 
-    //to get a single book Handler
+    //to get a single car Handler
     @GetMapping("/cars/{id}")
     public ResponseEntity<Optional<Car>> getSingleCar(@PathVariable("id") long id){
         Optional<Car> car = carService.getCarById(id);
@@ -44,7 +44,7 @@ public class UserController {
         return ResponseEntity.status(HttpStatus.CREATED).body(car);
     }  
 
-    // To add book Handler
+    // To add car Handler
     @PostMapping("/addcar")
     public ResponseEntity<Car> addCar(@RequestBody Car car){
         Car c = null;
@@ -58,7 +58,7 @@ public class UserController {
         
     }
 
-    // To delete book Handler
+    // To delete car Handler
     @DeleteMapping("/cars/{carId}")
     public ResponseEntity<Void> deleteCar(@PathVariable("carId") int carId){
         try{
@@ -70,7 +70,7 @@ public class UserController {
         }
     }
 
-    // To update book or update book handler
+    // To update car or update car handler
     @PutMapping("/cars/{carId}")
     public ResponseEntity<Car> updateCar(@RequestBody Car car,@PathVariable("carId") int carId ){
         try{
