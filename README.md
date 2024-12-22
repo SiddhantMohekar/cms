@@ -1,7 +1,7 @@
 # cms
 1. Clone the Repository
 
- $ git clone https://github.com/your-repo/car-management-system.git
+ $ git clone https://github.com/SiddhantMohekar/cms.git
  $ cd car-management-system
 
 2. Set Up the Database
