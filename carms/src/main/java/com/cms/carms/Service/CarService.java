@@ -22,7 +22,7 @@ public class CarService {
         return list;
     }
 
-    //to get single book
+    //to get single car
     public Optional<Car> getCarById(long id){
         Optional<Car> car = null;
         try{
@@ -33,18 +33,18 @@ public class CarService {
         return car;
     }
 
-    //To add new book
+    //To add new car
     public Car addCar(Car b){
         Car result = carRepository.save(b);
         return result;
     }
 
-    // To delete book
+    // To delete car
     public void deleteCar(long bid){
         carRepository.deleteById(bid);
     }
 
-    // To update book
+    // To update car
     public void updateCar(Car car,int carId){
     car.setId(carId);
     carRepository.save(car);
